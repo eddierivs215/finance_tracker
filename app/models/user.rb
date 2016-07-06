@@ -7,6 +7,7 @@ class User < ActiveRecord::Base
   has_many :user_stocks
   has_many :stocks, through: :user_stocks
   
+  
   def can_add_stock?(ticker_symbol)
     under_stock_limit? && !stock_already_added?(ticker_symbol) 
       
@@ -19,6 +20,6 @@ class User < ActiveRecord::Base
   def stock_already_added?(ticker_symbol)
     stock = Stock.find_by_ticker(ticker_symbol)
     return false unless stock
-    user_stocks.where(stock_id: stock.id).exists?
+    user_stocks.where(stock_id:stock.id).exists?
   end
 end
