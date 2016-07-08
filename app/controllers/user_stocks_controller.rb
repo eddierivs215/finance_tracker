@@ -1,5 +1,5 @@
 class UserStocksController < ApplicationController
-  before_action :set_user_stock, only: [:show, :edit, :update, :destroy]
+  before_action :set_user_stock, only: [:show, :edit, :update]
 
   # GET /user_stocks
   # GET /user_stocks.json
