@@ -69,7 +69,6 @@ class UserStocksController < ApplicationController
   # DELETE /user_stocks/1
   # DELETE /user_stocks/1.json
   def destroy
-    @user_stock = current_user.user_stocks.where(stock_id: params[:id]).firstwhere
     @user_stock.destroy
     respond_to do |format|
       format.html { redirect_to my_portfolio_path, 
