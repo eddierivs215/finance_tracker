@@ -1,5 +1,5 @@
 class UserStocksController < ApplicationController
-  before_action :set_user_stock, only: [:show, :edit, :update]
+  before_action :set_user_stock, only: [:show, :edit, :update, :destroy]
 
   # GET /user_stocks
   # GET /user_stocks.json
@@ -66,7 +66,7 @@ class UserStocksController < ApplicationController
     end
   end
 
-  # DELETE /user_stocks/1
+  #DELETE /user_stocks/1
   # DELETE /user_stocks/1.json
   def destroy
     @user_stock.destroy
