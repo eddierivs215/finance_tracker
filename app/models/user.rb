@@ -39,7 +39,6 @@ class User < ActiveRecord::Base
   
   def self.search(param)
     return User.none if param.blank?
-  
     param.strip!
     param.downcase!
     (first_name_matches(param) + last_name_matches(param) + email_matches(param)).uniq

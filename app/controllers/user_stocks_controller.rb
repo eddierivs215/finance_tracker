@@ -10,6 +10,8 @@ class UserStocksController < ApplicationController
   # GET /user_stocks/1
   # GET /user_stocks/1.json
   def show
+    @user = User.find(params[:id])
+    @user_stocks = @user.stocks
   end
 
   # GET /user_stocks/new
