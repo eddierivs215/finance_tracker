@@ -27,3 +27,14 @@
     background-color: darken(#d9534f, 20%) !important;
   }
 }
+
+.jumbotron {
+    background-image: asset-url("stocks.jpg");
+    background-size: cover;
+    height: 750px;
+    width: 950px;
+}
+
+.header-padding{
+  padding-left:5em
+}
